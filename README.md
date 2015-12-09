@@ -5,7 +5,7 @@
 Simply copy EPIheader.vim to your `$VIM/autoload`.<br>
 To run it, simply press `<F3>` or run `:EPIheader` in vim.
 <br><br>
-Check out : (https://www.github.com/Neavend/myconfig "myconfig"), an automated script for config files !
+Check out : [myconfig](https://www.github.com/Neavend/myconfig "Go to myconfig's Github page"), an automated script for config files !
 
 ## Credits:
 
