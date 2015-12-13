@@ -9,4 +9,4 @@ Check out : [myconfig](https://www.github.com/Neavend/myconfig "Go to myconfig's
 
 ## Credits:
 
-It is **(largerly)** inspired by 42's school header.
+It is **(largely)** inspired by 42's own school header script.
