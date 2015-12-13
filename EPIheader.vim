@@ -6,7 +6,7 @@
 "    By: simon_h <nicolas1.simon@epita.fr>        /___/ ,__/_/\__/\_,_/        "
 "                                                    /_/.eu                    "
 "    Created: 2015/12/09 12:35:03 by simon_h                                   "
-"    Updated: 2015/12/09 12:36:13 by simon_h                                   "
+"    Updated: 2015/12/13 13:19:39 by simon_h                                   "
 "                                                                              "
 " **************************************************************************** "
 
@@ -33,7 +33,7 @@ let s:asciiart = [
 
 let s:styles = [
 			\{
-			\'extensions': ['\.c$', '\.h$', '\.cc$', '\.hh$', '\.cpp$', '\.hpp$'],
+			\'extensions': ['\.c$', '\.h$', '\.cc$', '\.hh$', '\.cpp$', '\.hpp$', '\.cs$'],
 			\'start': '/*', 'end': '*/', 'fill': '*'
 			\},
 			\{
