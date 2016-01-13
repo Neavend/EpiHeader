@@ -6,7 +6,7 @@
 "    By: simon_h <nicolas1.simon@epita.fr>        /___/ ,__/_/\__/\_,_/        "
 "                                                    /_/.eu                    "
 "    Created: 2015/12/09 12:35:03 by simon_h                                   "
-"    Updated: 2015/12/13 13:19:39 by simon_h                                   "
+"    Updated: 2016/01/13 17:19:18 by nsimon           ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -130,7 +130,7 @@ function s:createline ()
 	return s:dateline("Created", 5)
 endfunction
 
-function s:updateline ()
+function s:update2line ()
 	return s:dateline("Updated", 6)
 endfunction
 
@@ -138,7 +138,7 @@ function s:emptyline ()
 	return s:start . repeat(' ', s:linelen - strlen(s:start) - strlen(s:end)) . s:end
 endfunction
 
-function s:filetype ()
+function s:filetype2 ()
 	let l:file = fnamemodify(bufname("%"), ':t')
 
 	let s:start = '#'
@@ -156,13 +156,13 @@ function s:filetype ()
 	endfor
 endfunction
 
-function s:insert ()
-	call s:filetype ()
+function s:insert2 ()
+	call s:filetype2 ()
 
 	call append(0, "")
 	call append (0, s:bigline())
 	call append (0, s:emptyline())
-	call append (0, s:updateline())
+	call append (0, s:update2line())
 	call append (0, s:createline())
 	call append (0, s:logo3())
 	call append (0, s:coderline())
@@ -173,17 +173,17 @@ function s:insert ()
 	call append (0, s:bigline())
 endfunction
 
-function s:update ()
-	call s:filetype ()
+function s:update2 ()
+	call s:filetype2 ()
 
 	let l:pattern = s:start . repeat(' ', 5 - strlen(s:start)) . "Updated: [0-9]"
 	let l:line = getline (9)
 
 	if l:line =~ l:pattern
-		call setline(9, s:updateline())
+		call setline(9, s:update2line())
 	endif
 endfunction
 
-command Epiheader call s:insert ()
+command Epiheader call s:insert2 ()
 nmap <F3> :Epiheader<CR>
-autocmd BufWritePre * call s:update ()
+autocmd BufWritePre * call s:update2 ()
